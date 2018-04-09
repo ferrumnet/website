@@ -1,0 +1,90 @@
+<HTML>
+
+<BODY>
+
+<h1>BTC</h1>
+
+<div id="btc"> </div>
+
+<h1>ETH</h1>
+
+<div id="btc"> </div>
+
+</BODY>
+
+<SCRIPT>
+
+    async function getTransaction(transaction) {
+    	var BASE_URL = "https://blockchain.info/rawtx/";
+        const result = await fetch(BASE_URL + transaction + '?cors=true', { });
+        const trans = await result.json()
+        var inputs = new Map();
+        var outputs = new Map();
+
+        (trans['inputs']).filter(i => i['prev_out']['spent']).forEach(i => {
+            inputs.set(i['prev_out']['addr'], i['prev_out']['value']);
+        });
+        (trans['out']).filter(i => i['spent']).forEach(i => {
+            outputs.set(i['addr'], i['value']);
+        })
+
+        return {
+            inputs: inputs,
+            outputs: outputs,
+        };
+    }
+
+
+
+
+var BTC_TRANS = [
+	"00000000000000000005a5f4228edb6fd465371b0647a37ca7dce53c9d432b03",
+	"47c882b69d33abc01de26d1e666d19697422afa97e3b52c4906ccc3a7eede253",
+	"0f0114276ecf441e28967ee6466f3cbd5ad26f9a3b1741029345cb32cbdd0438",
+	"22782784061c81470df169b3ef89f0b78e8c0f0f7560a277f1c299c046e5d699",
+	"e77bf80b5f65a49f20a87948418a58ad80ecb34bf69a6566a2a54ac827dc3f42",
+	"c978902a1a5571e9cf5bb4663fb2a59afcac52c8e6438312f5b432c7806bc9ab",
+	"cfd9130c7b5279deedca4bca3e7e574d50fe6c15c8568fdc58e469d9940328b6",
+	"fb84f2b9f4731ecbd6fd87af3df95647e343e9446283cfa346835507456cb914",
+	"eb781ab1733df6ddffb740fd9c5da42b30c6e84a3b923c0e601b4372a8f4d13b",
+	"e1c9012a41925fc9d75be1dcc558ba949bb04ba26e41cf3e4878b17b833d6cbc",
+	"062ca7ebdc1755f259ca70b4d82328e07d525d7492ebd905c76166ae9c63b31e",
+	"2db6336ea87e6948c835f24267569fc165703cdc748cf13a2fd8bc9c62783150",
+	"f948b5d0124fee83a07d6299c61ca61d2cc34aa0f42bbd1d23e684c1f55350c8",
+	"c87590c345026c66754d25e16896d918aa7d66819cb03ab5383655e7c05c60b3",
+	"8e5edcc26b425768c46a4731aaf5a033923cf9dffe0a07152e54fefd42c6b50f",
+	"bf53c7f805e3403b20927c57a5e5aaa080eacecc4ac95c8d43f9cf9f7dc9a9c8",
+	"12e4d6d25289dc50e65a355d4578eb5756e75185f6c2d773edc65e808c623c06",
+	"28064731dc1ccf88ca3044fde911c9ce0ba2662d004d7a92ead7c9e5d94c50ec",
+	"8535abe0e2be7676a9e3bf898ed65b325dc12fa107f60bdda2b43d912a9281c5",
+	"68dcd94fc0ecf44efc68fad97b965e60330a20b6fe2d67a10a7741b67daf60d1",
+	"8c3bef835678eb12e668ccb45d9194c43b49a94d6ce250735ec812a4d752093b",
+	"d396d3694912c3b18001a7b97ce879ceb0afecc47d63c056c39dbf473bfed5ac"];
+
+var ETH_TRANS = [];
+
+function toQr(t) {
+	return "<p>" + t + '<br/><img src="http://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=' + t + '&amp;qzone=1&amp;margin=0&amp;size=200x200&amp;ecc=L" alt="qr code" /></p><div id="' + t + '"></div>';
+}
+
+async function fillTrans(id, trans) {
+	var html = "";
+	trans.map(t => toQr(t)).forEach(i => html += i);
+
+	document.getElementById(id).innerHTML = html;
+
+	trans.forEach(t => {
+		var tv = getTransaction(t).then((v) => {
+			var a = Array.from(v["inputs"].keys())[0];
+			document.getElementById(t).innerHTML = toQr(a) + "<hr />";
+		});
+	});
+}
+
+fillTrans("btc", BTC_TRANS);
+
+</SCRIPT>
+
+</HTML>
+
+
