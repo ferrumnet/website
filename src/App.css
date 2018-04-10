@@ -70,10 +70,9 @@
 
 .roadContainer {
   position: relative;
-  top: 0px;
+  top: 60px;
   margin: 0 auto;
   width: 624px;
-  height: 100px;
   display: table;
 }
 
@@ -149,4 +148,17 @@
   width: 524px;
   left: 50px;
   z-index: 10;
+}
+
+.top-bkg {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  height: 800px;
+}
+
+.top-sub-header {
+  color: white;
+  font-family: Verdana;
+  font-size: 28px;
 }

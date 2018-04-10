@@ -43,8 +43,6 @@ class Bubble extends React.Component<BubleProps, {}> {
         let opacity = 0;
         if (scrollY > scrollStart) {
             opacity = 100 - (100) * ((scrollEnds - scrollY) / scrollWindow);
-            // tslint:disable-next-line:no-console
-            console.log(opacity);
         }
 
         if (scrollY > scrollEnds) {
@@ -111,8 +109,6 @@ class Miniman extends React.Component<MinimanProps, {}> {
         if (scrollY > scrollStart) {
             top = topPos + (scrollSpan) * ((scrollEnds - scrollY) / scrollWindow);
             opacity = 100 - (100) * ((scrollEnds - scrollY) / scrollWindow);
-            // tslint:disable-next-line:no-console
-            console.log(opacity);
         }
 
         if (scrollY > scrollEnds) {
@@ -193,8 +189,6 @@ export class Sprite extends React.Component<SpriteProps, SpriteState> {
             leftPos = leftPosBase + (scrollSpan) * ((scrollEnds - this.state.scrollY) / scrollWindow);
             opacity = 100;
             // opacity = 3 * (100 - (100) * ((scrollEnds - this.state.scrollY) / scrollWindow));
-            // tslint:disable-next-line:no-console
-            console.log(opacity);
         }
 
         if (this.state.scrollY > scrollEnds) {
@@ -268,8 +262,6 @@ export class Sprite extends React.Component<SpriteProps, SpriteState> {
         // Overwite the leftPos for float objects
         if (this.props.asset.attach === 'float') {
             this.state = {...this.state, leftPos: Consts.MiddleOffset - size[0] / 2};
-            // tslint:disable-next-line:no-console
-            console.log('GOT YA', this.state);
         }
         
         return (

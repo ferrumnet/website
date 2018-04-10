@@ -1,3 +1,4 @@
+import { Consts } from './timeline';
 
 export interface ScrollPos {
     x: number;
@@ -13,7 +14,7 @@ export class Context {
         window.onscroll = (e: UIEvent) => {
             var doc = document.documentElement;
             var left = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
-            var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+            var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0) - Consts.ScrollTopGap;
             // tslint:disable-next-line:no-console
             // console.log(left, top);
             this.onScroll.forEach(k => {

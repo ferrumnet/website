@@ -25,7 +25,7 @@ export class MovieLine extends React.Component<{}, MovieLineState> {
         const screenWidth = window.screen.availWidth;
         const windowWidth = this.state.screenWidth;
         const showSprites = (windowWidth >= Consts.MinScreenSize);
-        const errorMsg = windowWidth < 850 ? 'this website is best views on a full screen desktop browsers' : undefined;
+        const errorMsg = windowWidth < 850 ? 'this website is best viewed on larger screens' : undefined;
         
         const scaleFactor = Math.max(0.35, windowWidth / 1000);
         let transform = undefined;
@@ -50,8 +50,6 @@ export class MovieLine extends React.Component<{}, MovieLineState> {
                 </div>
                 <div className="head-message">
                     <span>
-                        <b>Ferrum</b>
-                         <br/> 
                          <br/> 
                          Internet of Value is Here <br />
                          <br />

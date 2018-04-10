@@ -16,6 +16,7 @@ export namespace Consts {
     export const LeftAssetLeft = -70;
     export const RightAssetLeft = 680;
     export const SpriteTop = 560;
+    export const ScrollTopGap = 400;
     export const ScrollSize = 400;
     export const MinimanScrollSize = 150;
     export const BubbleOffset = 200;
