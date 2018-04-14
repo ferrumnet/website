@@ -83,8 +83,8 @@ const WhatIsFerrum = (props: ScalableProps) => (
                                     Ferrum is a peer-to-peer graph to exchange and transact most crypto-currencies 
                                     with NO fee or counterparty risk. Ferrum is a decentralized, and distributed 
                                     ledger technology with built-in support to read across chains. 
-                                    This means Ferrum is able to represent almost any crypt-currency and allow them 
-                                    them be exchanged and transacted in the Ferrum network. Bitcoin is expensive and 
+                                    This means Ferrum is able to represent almost any crypto-currency and allow them 
+                                    to be exchanged and transacted in the Ferrum network. Bitcoin is expensive and 
                                     slow to trade, in Ferrum network Bitcoin can be traded or exchanged fast, and 
                                     without any fees.
                                 </span></p>
@@ -113,7 +113,6 @@ const CompareWithTraditional = (props: ScalableProps) => (
                                 <h3>Prone to hack</h3>
                                 <h3>Tooling limited by exchange</h3>
                             </div>
-                            <a href="#" className="content-wrapper-link" />
                         </div>
                     </div>
                 </div>
@@ -126,7 +125,6 @@ const CompareWithTraditional = (props: ScalableProps) => (
                                 <h3>Can NOT be hacked</h3>
                                 <h3>Open community tooling</h3>
                             </div>
-                            <a href="#" className="content-wrapper-link" />
                         </div>
                     </div>
                 </div>
@@ -150,7 +148,7 @@ const CompareWithAtomic = (props: ScalableProps) => (
                 <div className="col-sm-6 sm-margin-b-2">
                     <div >
                     <div className="service" style={{height: 400}}>
-                            <div className="service-info">
+                            <div>
                                 <h1>Ferrum</h1>
                                 <h3>Almost instant transactions</h3>
                                 <h3>No fee <br /></h3>
@@ -158,7 +156,6 @@ const CompareWithAtomic = (props: ScalableProps) => (
                                 <h3>Can represents other networks</h3>
                                 <h3>Exchange with fiat currencies</h3>
                             </div>
-                            <a href="#" className="content-wrapper-link" />
                         </div>
                     </div>
                 </div>
@@ -171,7 +168,6 @@ const CompareWithAtomic = (props: ScalableProps) => (
                                 <h3>One fee per network in swap</h3>
                                 <h3>Requires smart contracts</h3>
                             </div>
-                            <a href="#" className="content-wrapper-link" />
                         </div>
                     </div>
                 </div>
