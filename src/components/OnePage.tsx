@@ -38,6 +38,15 @@ const NavBar = (props: NavBarProps) => (
                             <li className="nav-item">
                                 <a className="nav-item-child nav-item-hover" href="#page-ferrum">What is Ferrum</a></li>
                             <li className="nav-item">
+                                <a className="nav-item-child nav-item-hover" href="https://github.com/ferrumnet">
+                                    Github</a></li>
+                            <li className="nav-item">
+                                <a 
+                                    className="nav-item-child nav-item-hover" 
+                                    href="https://github.com/ferrumnet/yellowpaper/blob/master/YELLOWPAPER.md"
+                                >Yellow Paper
+                                </a></li>
+                            <li className="nav-item">
                                 <a className="nav-item-child nav-item-hover" href="#page-footer">Contact</a></li>
                         </ul>
                     </div>
