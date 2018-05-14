@@ -1,0 +1,30 @@
+
+Ferrum
+Future of cryptocurrencies we were promised
+
+
+What is Ferrum
+
+Ferrum is a peer-to-peer graph to exchange and transact most crypto-currencies with NO fee or counterparty risk. Ferrum is a decentralized, and distributed ledger technology with built-in support to read across chains. This means Ferrum is able to represent almost any crypt-currency and allow them them be exchanged and transacted in the Ferrum network. Bitcoin is expensive and slow to trade, in Ferrum network Bitcoin can be traded or exchanged fast, and without any fees.
+
+READ MORE
+
+
+Decentralized versus Centralized
+
+Exchange controls the funds     Only user controls the funds
+Can NOT be hacked        	Hackable
+Tooling limited by exchange     Open community tooling
+
+
+Why not Atomic Swap
+
+Atomic Swap allows direct exchange between different networks. It is an interesting technology, but it has some serious limitations:
+
+Feature                Ferrum                      Atomic Swap
+Transaction time       Almost instant         Several transactions on different network, so only as fast as the slowest network
+Cost       No Fees                     Several transactions, hence several fees
+Can be used for a network without smart contract support    YES       NO
+Can represents other networks    YES, Provides fast and fee free transactions for any network          NO
+Possibility of exchange with fiat currencies    YES          NO
+
